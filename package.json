@@ -1,0 +1,40 @@
+{
+    "name": "xenolite",
+    "version": "1.0.0",
+    "description": "This is story building application",
+    "author": "Spandan Buragohain",
+    "main": "app.js",
+    "scripts": {
+        "setup": "./scripts/setup.sh",
+        "build": "./scripts/build.sh",
+        "build-wasm": "./scripts/build.sh -w",
+        "build-react": "./scripts/build.sh -r",
+        "build-release": "echo \"Error: no build release script specified\"",
+        "install": "./scripts/install.sh",
+        "link-wasm": "./scripts/link.sh",
+        "serve": "./scripts/serve.sh",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "prop-types": "^15.7.2",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-router-dom": "^5.0.0",
+        "styled-components": "^4.2.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.4.4",
+        "@babel/core": "^7.4.4",
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+        "@babel/preset-env": "^7.4.4",
+        "@babel/preset-react": "^7.0.0",
+        "babel-loader": "^8.0.5",
+        "file-loader": "^3.0.1",
+        "html-webpack-plugin": "^3.2.0",
+        "ts-loader": "^5.4.5",
+        "typescript": "^3.4.5",
+        "webpack": "^4.30.0",
+        "webpack-cli": "^3.3.1",
+        "webpack-dev-server": "^3.3.1"
+    }
+}

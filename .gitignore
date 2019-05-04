@@ -1,0 +1,12 @@
+# Cargo
+/target
+**/*.rs.bk
+Cargo.lock
+/pkg
+
+# Node
+dist/
+node_modules/
+
+# VSCode
+.vscode/
