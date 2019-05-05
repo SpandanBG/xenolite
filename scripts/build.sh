@@ -26,6 +26,21 @@ function build_react() {
     echo "---------------------------------"
 }
 
+# ---------------------- PRODUCTION BUILD ----------------------
+function make_production_build() {
+    echo "\n---------------------------------"
+    echo "\n Bundling Production Build"
+    echo "---------------------------------"
+
+    wasm-pack build --release
+    npx webpack --mode=production
+
+    echo "\n---------------------------------"
+    echo "\n Production Bundling Complete"
+    echo "---------------------------------"
+
+}
+
 # ----- main -----
 if [ $# -eq 0 ]; then
     build_wasm
@@ -33,12 +48,16 @@ if [ $# -eq 0 ]; then
 else
     while [ "$1" != "" ]; do
         case $1 in
-            -w | --wasm )   build_wasm
-                            ;;
-            -r | --react )  build_react
-                            ;;
+        -w | --wasm)
+            build_wasm
+            ;;
+        -r | --react)
+            build_react
+            ;;
+        -p | --production)
+            make_production_build
+            ;;
         esac
         shift
     done
 fi
-

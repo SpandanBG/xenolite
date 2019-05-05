@@ -9,7 +9,7 @@
         "build": "./scripts/build.sh",
         "build-wasm": "./scripts/build.sh -w",
         "build-react": "./scripts/build.sh -r",
-        "build-release": "echo \"Error: no build release script specified\"",
+        "build-prod": "./scripts/build.sh -p",
         "install": "./scripts/install.sh",
         "link-wasm": "./scripts/link.sh",
         "serve": "./scripts/serve.sh",
