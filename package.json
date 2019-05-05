@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "This is story building application",
     "author": "Spandan Buragohain",
-    "main": "app.js",
+    "main": "./src/web/App.js",
     "scripts": {
         "setup": "./scripts/setup.sh",
         "build": "./scripts/build.sh",
