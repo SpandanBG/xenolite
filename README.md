@@ -31,11 +31,11 @@ npm run build-react
 npm run build-wasm
 
 // builds all wasm and react packages in production mode
-npm run build-release 
+npm run build-prod 
 ```
 #### To link the wasm package to node modules:
 ```
-npm run link
+npm run link-wasm
 ```
 #### To serve react application using webpack dev server:
 ```
