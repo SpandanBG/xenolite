@@ -33,6 +33,7 @@ function make_production_build() {
     echo "---------------------------------"
 
     wasm-pack build --release
+    ./scripts/link.sh
     npx webpack --mode=production
 
     echo "\n---------------------------------"
@@ -48,6 +49,11 @@ if [ $# -eq 0 ]; then
 else
     while [ "$1" != "" ]; do
         case $1 in
+        -wl | --with-link)
+            build_wasm
+            ./scripts/link.sh
+            build_react
+            ;;
         -w | --wasm)
             build_wasm
             ;;
