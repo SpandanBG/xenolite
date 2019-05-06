@@ -17,7 +17,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
+                test: /\.(jsx?|tsx?)$/,
                 exclude: /node_modules/,
                 loader: "babel-loader",
                 options: {
@@ -26,13 +26,19 @@ module.exports = {
                 }
             },
             {
-                test: /\.tsx?$/,
-                exclude: /node_modules/,
-                use: [{ loader: "ts-loader" }]
-            },
-            {
                 test: /\.(png|jpg|gif)$/,
-                use: [{ loader: "file-loader" }]
+                use: [
+                    {
+                        loader: "babel-loader?cacheDirectory",
+                        options: {
+                            presets: ["@babel/env"],
+                            plugins: ["@babel/plugin-syntax-dynamic-import"]
+                        }
+                    },
+                    {
+                        loader: "file-loader"
+                    }
+                ]
             }
         ]
     },
